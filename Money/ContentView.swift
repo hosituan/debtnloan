@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var homeRouter = HomeRouter()
+    @StateObject var alertManager = AlertManager()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            HomeView()
+                .environmentObject(homeRouter)
+                .environmentObject(alertManager)
         }
-        .padding()
+
     }
 }
 

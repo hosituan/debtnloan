@@ -6,9 +6,13 @@
 //
 
 import SwiftUI
+import IQKeyboardManagerSwift
 
 @main
 struct MoneyApp: App {
+    init() {
+        
+    }
     var body: some Scene {
         WindowGroup {
             ContentView()
